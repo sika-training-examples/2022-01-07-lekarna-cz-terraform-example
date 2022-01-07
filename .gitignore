@@ -6,3 +6,6 @@
 !*.EXAMPLE.tfvars
 *.tfplan
 *.backup
+
+# Kubernetes
+kubeconfig-*.yml
