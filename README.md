@@ -1,0 +1,1 @@
+# lekarna-cz-terraform-example
