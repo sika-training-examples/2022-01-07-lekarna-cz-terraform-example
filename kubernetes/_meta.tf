@@ -10,6 +10,10 @@ terraform {
   }
 }
 
+terraform {
+  backend "http" {}
+}
+
 variable "digitalocean_token" {}
 
 provider "digitalocean" {
