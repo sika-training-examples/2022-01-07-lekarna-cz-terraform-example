@@ -5,3 +5,12 @@ module "k8s--prod" {
   zone_id            = local.zone_id
   kubernetes_version = local.kubernetes_prod_version
 }
+
+output "kubeconfig-prod" {
+  value     = module.k8s--prod.kubeconfig
+  sensitive = true
+}
+
+output "lb-ip-prod" {
+  value = module.k8s--prod.lb-ip
+}
