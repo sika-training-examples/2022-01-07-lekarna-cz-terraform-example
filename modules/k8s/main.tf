@@ -34,7 +34,7 @@ variable "region" {
   default = "fra1"
 }
 
-variable "version" {
+variable "kubernetes_version" {
   type        = string
   description = "Version of Kubernetes"
 }
@@ -53,7 +53,7 @@ variable "node_count" {
 resource "digitalocean_kubernetes_cluster" "main" {
   name    = var.name
   region  = var.region
-  version = var.version
+  version = var.kubernetes_version
   node_pool {
     name       = var.name
     size       = var.node_size
